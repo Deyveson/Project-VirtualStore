@@ -1,7 +1,7 @@
 # Project-VirtualStore
 
-Back-End -> Java (SpringBoot)
-Front-End -> React
+- Back-End -> Java (SpringBoot)
+- Front-End -> React
 
 
 ## BANCO DE DADOS - H2

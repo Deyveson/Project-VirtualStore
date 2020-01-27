@@ -1,5 +1,7 @@
 package com.br.Virtual.Store.service;
 
+import com.br.Virtual.Store.domain.Product;
+
 public interface StoreService {
-    String create();
+    Product create(String name, Double price);
 }

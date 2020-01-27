@@ -1,5 +1,6 @@
 package com.br.Virtual.Store.controller;
 
+import com.br.Virtual.Store.domain.Product;
 import com.br.Virtual.Store.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,9 +16,10 @@ public class StoreController {
     private StoreService service;
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public String registerProduct (@RequestParam(value = "Produto", defaultValue = "", required = false) String nome){
+    public Product registerProduct (@RequestParam(value = "Name", defaultValue = "", required = false) String name,
+                                    @RequestParam(value = "Price", defaultValue = "", required = false) Double price){
 
-        return service.create();
+        return service.create(name, price);
     }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET)
