@@ -1,6 +1,6 @@
 package com.br.Virtual.Store.controller;
 
-
+import com.br.Virtual.Store.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,15 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/store")
 public class StoreController {
 
-//
-//    @Autowired
-//    private StoreService service;
-
+    @Autowired
+    private StoreService service;
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public String registerProduct (@RequestParam(value = "Produto", defaultValue = "", required = false) String nome){
 
-        return "Cadastrar";
+        return service.create();
     }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET)
