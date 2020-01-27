@@ -13,7 +13,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
 
-    @Column(name = "NAME", columnDefinition = "VARCHAR(8)")
+    @Column(name = "NAME", columnDefinition = "VARCHAR(25)")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String name;
 
