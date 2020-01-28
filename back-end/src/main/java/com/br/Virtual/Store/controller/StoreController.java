@@ -3,10 +3,9 @@ package com.br.Virtual.Store.controller;
 import com.br.Virtual.Store.domain.Product;
 import com.br.Virtual.Store.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/store")
@@ -16,28 +15,23 @@ public class StoreController {
     private StoreService service;
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public Product registerProduct (@RequestParam(value = "Name", defaultValue = "", required = false) String name,
-                                    @RequestParam(value = "Price", defaultValue = "", required = false) Double price){
-
-        return service.create(name, price);
+    public Product registerProduct (@RequestBody Product product){
+        return service.create(product);
     }
 
-    @RequestMapping(value = "/search", method = RequestMethod.GET)
-    public String searchProduct (@RequestParam(value = "Produto", defaultValue = "", required = false) String nome){
-
-        return "Pesquisar";
+    @RequestMapping(value = "/findAllProduct", method = RequestMethod.GET)
+    public List<Product> allProduct (){
+        return service.allProduct();
     }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-    public String deleteProduct (@RequestParam(value = "Produto", defaultValue = "", required = false) String nome){
-
-        return "Excluir";
+    @DeleteMapping("/{id}")
+    public void deleteProduto(@PathVariable("id") Long id) {
+        service.deleteProduct(id);
     }
 
-    @RequestMapping(value = "/alter", method = RequestMethod.PUT)
-    public String alterProduct (@RequestParam(value = "Produto", defaultValue = "", required = false) String nome){
-
-        return "Alterar";
+    @PutMapping(path = "/{id}")
+    public Product updateProduct (@PathVariable("id") Long id, @RequestBody Product product){
+        return service.updateProduto(id, product);
     }
 
 }

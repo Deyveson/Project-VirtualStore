@@ -13,18 +13,28 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
 
-    @Column(name = "NAME", columnDefinition = "VARCHAR(25)")
+    @Column(name = "nome", columnDefinition = "VARCHAR(25)")
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String name;
+    private String nome;
 
-    @Column(name = "PRICE")
+    @Column(name = "preco")
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private Double price;
+    private Double preco;
 
-    public Product(Long id, String name, Double price) {
+    @Column(name = "categoria", columnDefinition = "VARCHAR(25)")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String categoria;
+
+    @Column(name = "quantidade", columnDefinition = "VARCHAR(25)")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private int quantidade;
+
+    public Product(Long id, String nome, Double preco, String categoria, int quantidade) {
         this.ID = id;
-        this.name = name;
-        this.price = price;
+        this.nome = nome;
+        this.preco = preco;
+        this.categoria = categoria;
+        this.quantidade = quantidade;
     }
 
     public Product() {
@@ -38,19 +48,35 @@ public class Product {
         this.ID = ID;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public Double getPrice() {
-        return price;
+    public Double getPreco() {
+        return preco;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 }
