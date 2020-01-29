@@ -14,11 +14,13 @@ public class StoreController {
     @Autowired
     private StoreService service;
 
+    @CrossOrigin
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public Product registerProduct (@RequestBody Product product){
         return service.create(product);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/findAllProduct", method = RequestMethod.GET)
     public List<Product> allProduct (){
         return service.allProduct();
