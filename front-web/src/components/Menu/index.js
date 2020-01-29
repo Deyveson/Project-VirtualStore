@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import AddIcon from '@material-ui/icons/Add';
+import Fab from '@material-ui/core/Fab';
 
 import './styles.scss';
 
@@ -15,15 +17,12 @@ export default function Menu(){
           <div className="navbar">
             <AppBar position="static">
               <Toolbar>
-                <IconButton edge="start" className="button" color="inherit" aria-label="menu">
-                  <MenuIcon/>
-                </IconButton>
+                <Fab color="secondary" aria-label="Add">
+                    <AddIcon />
+                </Fab>
                 <Typography variant="h6" className="title">
                   VirtualStore
                 </Typography>
-                <Button className="btn-cadastrar" variant="contained" color="secondary">
-                  Add
-                </Button>
               </Toolbar>
             </AppBar>
           </div>
