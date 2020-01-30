@@ -33,7 +33,7 @@ Front-end em React, usei o yarn para gerenciar as dependencias, Material-UI como
 
 ## Back-End SringBoot for Swagger
 
-->  `http://localhost:8080/virtual-store/api/swagger-ui.html` 
+- http://localhost:8080/virtual-store/api/swagger-ui.html
 
 ROUTES: 
 1. `POST /store/create` - Salvar Produto
