@@ -49,3 +49,8 @@ ROUTES:
 - http://localhost:3000/add - Adicionar Produtos 
 
 
+## Install with docker-compose (Shell): 
+1. cd `Project-VirtualStore`
+2. `docker-compose up -d`
+
+
