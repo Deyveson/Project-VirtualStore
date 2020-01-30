@@ -3,3 +3,12 @@ $myColor: red;
 product {
     width: 0;
 }
+.produtos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+} 
+.preco {
+    color: green;
+    font-weight: bold
+}

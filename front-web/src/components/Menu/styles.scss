@@ -1,20 +1,16 @@
-$myColor: red;
-    
+$myColor: #FFF;
+
 navbar {
     flex-grow: 1,
 }
 .title {
     margin-left: 10px !important;
+    font-size: 20px !important;
+    
+    a {
+        color: $myColor;
+    }
 }
-
-button {
-    margin-right: 2;
-}
-
-title {
-    flex-grow: 1;
-}
-
 btn-cadastrar {
     margin-right: 0;
 }

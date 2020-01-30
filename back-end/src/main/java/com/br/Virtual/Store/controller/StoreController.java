@@ -26,11 +26,13 @@ public class StoreController {
         return service.allProduct();
     }
 
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public void deleteProduto(@PathVariable("id") Long id) {
         service.deleteProduct(id);
     }
 
+    @CrossOrigin
     @PutMapping(path = "/{id}")
     public Product updateProduct (@PathVariable("id") Long id, @RequestBody Product product){
         return service.updateProduto(id, product);
