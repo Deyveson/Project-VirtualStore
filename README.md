@@ -19,7 +19,7 @@ Front-end em ReactJS, usei o yarn para gerenciar as dependencias, Material-UI co
 ## Installation and run
 1. Clone this repository: `git clone https://github.com/Deyveson/Project-VirtualStore`
 2. `cd` into the `back-end` folder and run the following commands:
-3. Run App `mvn spring-boot:run` or download SprinTool https://spring.io/tools
+3. Run App `mvn spring-boot:run` or download Spring Tool https://spring.io/tools
 5. Open your browser and see the server back-end running on `http://localhost:8080/virtual-store/api/swagger-ui.html`.
 6. `cd` into the `front-end` folder and run the following commands:
 7. `yarn install`
