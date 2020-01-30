@@ -3,13 +3,19 @@ services:
   backend:
     image: 'maven:3-jdk-8-alpine'
     volumes:
-     - ./ws-parking-lot:/app/
-    command: bash -c "
-             apk add tzdata &&
-             cp /usr/share/zoneinfo/America/Manaus /etc/localtime &&
-             echo 'America/Manaus' > /etc/timezone &&
-             mvn spring-boot:run
-             "
+     - ./back-end:/app/
+    command: mvn clean spring-boot:run
     working_dir: /app
     ports:
      - 8080:8080
+    depends_on:
+     - icts-mysql
+
+  frontend:
+    image: 'node:lts-alpine'
+    volumes:
+     - ./front-web:/app/
+    command: sh -c "(yarn i && yarn build) && node server.js"
+    working_dir: /app
+    ports:
+     - 3000:3000
