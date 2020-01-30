@@ -8,14 +8,12 @@ services:
     working_dir: /app
     ports:
      - 8080:8080
-    depends_on:
-     - icts-mysql
 
   frontend:
     image: 'node:lts-alpine'
     volumes:
      - ./front-web:/app/
-    command: sh -c "(yarn i && yarn build) && node server.js"
+    command: sh -c "yarn install && yarn start"
     working_dir: /app
     ports:
      - 3000:3000
