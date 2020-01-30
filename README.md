@@ -16,7 +16,11 @@ Front-end em ReactJS, usei o yarn para gerenciar as dependencias, Material-UI co
 - H2
 - SASS
 
-## Installation and run
+## Run with docker-compose (Shell): 
+1. cd `Project-VirtualStore`
+2. `docker-compose up -d`
+
+## Installation and run by project
 1. Clone this repository: `git clone https://github.com/Deyveson/Project-VirtualStore`
 2. `cd` into the `back-end` folder and run the following commands:
 3. Run App `mvn spring-boot:run` or download Spring Tool https://spring.io/tools
@@ -48,9 +52,5 @@ ROUTES:
 - http://localhost:3000/ - Catalogo de ProdutoS
 - http://localhost:3000/add - Adicionar Produtos 
 
-
-## Install with docker-compose (Shell): 
-1. cd `Project-VirtualStore`
-2. `docker-compose up -d`
 
 
