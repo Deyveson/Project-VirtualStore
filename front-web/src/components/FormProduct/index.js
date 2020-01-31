@@ -17,14 +17,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function FormProduct(props){
-    
 
     const param = props.location.state;
-  
+
     const [nome, setNome] = useState(param ? param.nome : '');
     const [categoria, setCategoria] = useState(param ? param.categoria: '');
-    const [preco, setPreco] = useState(param ? param.preco : 0);
-    const [quantidade, setQuantidade] = useState(param ? param.quantidade : 0);
+    const [preco, setPreco] = useState(param ? param.preco : '');
+    const [quantidade, setQuantidade] = useState(param ? param.quantidade : '');
     
     const classes = useStyles();
 
@@ -32,11 +31,14 @@ export default function FormProduct(props){
 
         e.preventDefault();
 
-        //const product = {id, nome, categoria, preco, quantidade};
-        //await api.post('store/create', product);
-       
-        const product = {nome, categoria, preco, quantidade};
-        await api.post('store/create', product);
+        if(param != null ){
+            const id = param.id;
+            const product = {id, nome, categoria, preco, quantidade};
+            await api.post('store/create', product);
+        }else {
+            const product = {nome, categoria, preco, quantidade};
+            await api.post('store/create', product);  
+        }
 
         setNome('');
         setCategoria('');
