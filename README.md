@@ -1,6 +1,6 @@
 # Project-VirtualStore
-- Projeto loja virtual usando tecnoligas atuais, Back-end com SpringBoot(Java), 
-Front-end em React, usei o yarn para gerenciar as dependencias, Material-UI como framework de estilização de componentes, SASS para as folhas de estilos.
+- Projeto loja virtual usando tecnologias atuais, Back-end com SpringBoot(Java), 
+Front-end em ReactJS, usei o yarn para gerenciar as dependencias, Material-UI como framework de estilização de componentes, SASS para as folhas de estilos.
 
 ## Tecnologias e bibliotecas nescessarias para execução dos projetos.
 - Maven 
