@@ -1,9 +1,14 @@
 services:
     - docker
-    - maven
+
 language: node_js
 
 node_js: '6'
+
+language: java
+
+jdk:
+  - openjdk8
 
 cache: yarn
 
