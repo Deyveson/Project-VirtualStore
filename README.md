@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Deyveson/Project-VirtualStore.svg?branch=master)](https://travis-ci.org/Deyveson/Project-VirtualStore.svg?branch=master)
+
 # Project-VirtualStore
 - Projeto loja virtual usando tecnologias atuais, Back-end com SpringBoot(Java), 
 Front-end em ReactJS, usei o yarn para gerenciar as dependencias, Material-UI como framework de estilização de componentes, SASS para as folhas de estilos.
