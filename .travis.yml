@@ -8,5 +8,5 @@ before_install:
     - chmod +x docker-compose
     - sudo mv docker-compose /usr/local/bin
     - docker-compose up
-    - cd Project-VirtualStore/
+    - cd Deyveson/Project-VirtualStore
     - docker-compose up -d --build
