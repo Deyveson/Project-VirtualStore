@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Deyveson/Project-VirtualStore.svg?branch=master)](https://travis-ci.org/Deyveson/Project-VirtualStore.svg?branch=master)
+[![Build Status](https://travis-ci.org/Deyveson/Project-VirtualStore.svg?branch=master)](https://travis-ci.org/Deyveson/Project-VirtualStore)
 
 # Project-VirtualStore
 - Projeto loja virtual usando tecnologias atuais, Back-end com SpringBoot(Java), 
