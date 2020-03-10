@@ -1,5 +1,12 @@
 services:
     - docker
+    - maven
+language: node_js
+
+node_js: '6'
+
+cache: yarn
+
 env:
     - DOCKER_COMPOSE_VERSION=1.4.2
 before_install:

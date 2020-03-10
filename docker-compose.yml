@@ -9,11 +9,11 @@ services:
     ports:
      - 8080:8080
 
-  # frontend:
-  #   image: 'node:lts-alpine'
-  #   volumes:
-  #    - ./front-web:/app/
-  #   command: sh -c "yarn install && yarn start"
-  #   working_dir: /app
-  #   ports:
-  #    - 3000:3000
+  frontend:
+    image: 'node:lts-alpine'
+    volumes:
+     - ./front-web:/app/
+    command: sh -c "yarn install && yarn start"
+    working_dir: /app
+    ports:
+     - 3000:3000
